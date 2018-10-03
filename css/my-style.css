@@ -1,0 +1,34 @@
+/* Stylesheet for reveal.js presenation */
+
+body {
+	.reveal .slide-number {
+	  position: absolute;
+	  display: block;
+	  width: 10%;
+	  right: 8px;
+	  bottom: 8px;
+	  z-index: 31;
+	 }
+
+	p.citation {
+		font-size: 28px;
+		font-style: italic;
+	}
+
+	.reveal .smalltext {
+	  font-size: 32px;
+	}
+
+	/* Overwrite moon - put in another css file */
+	::selection {
+	  color: #fff;
+	  background: #d33682;
+	@ -54,7 +58,7 @@ body {
+	  font-weight: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  text-transform: uppercase;
+	/*  text-transform: uppercase; */
+	  text-shadow: none;
+	  word-wrap: break-word; }
+}
