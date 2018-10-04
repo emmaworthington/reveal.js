@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/moon.css">
+		<link rel="stylesheet" href="../../css/my-style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+
+			<div class="slides">
+ 
+				<section id='title_slide' data-background-image="logos/combined_logo_white.png" data-background-size="95%" data-background-position="50% 5%">
+					<h3>The Atlantic Meridional Overturning Circulation: detecting slowdown due to climate change</h3>
+					<p>Emma Worthington</p>
+				</section>
+
+
+				<section id='background'>
+
+					<section>
+						<p>Outline</p>
+						<ul>
+							<li>What is the Atlantic Meridional Overturning Circulation?</li>
+							<li>Why should we care if it's changing?</li>
+							<li>When will we know if it's changing due to climate change?</li>
+						</ul>
+					</section>
+					
+					<section>What is the Atlantic Meridional Overturning Circulation?</section>
+					
+					<section>Global thermohaline circulation
+						<video class="fragment" data-autoplay loop="true" src="videos/thermohaline_conveyor_60fps.mp4"></video>
+						<img style="float: left; width: 10%; margin-left: 25px;" class="plain" src="logos/nasa_meatball_50.png">
+						<p style="float: right; width: 85%;" class="fragment smalltext">(thermo = temperature; haline = salinity)</p>
+					</section>
+					
+					<section>Atlantic Meridional Overturning Circulation
+						<p>(AMOC)</p>
+						<div class="fragment">
+							<img src="figures/amoc_schematic_detail.jpg" height="350px">
+						</div>
+						<p class="fragment smalltext">Heat lost to atmosphere</p>
+						<p class="fragment smalltext">Carbon moved to deep ocean</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<p>Climate simulations show that the AMOC is very likely to slow down by the end of this century</p>
+						<p class="citation">(Intergovernmental Panel on Climate Change (IPCC), 5th Annual Report, 2013)</p>
+						<p class="fragment">So what?</p>
+					</section>
+					
+					<section id="amoc_slowdown">What happens if the AMOC slows down?
+						<div class="fragment">
+							<div style="float: left; width: 50%">
+								<img src="figures/day_after_tomorrow.jpg" height="350px">
+								<div class="fragment">
+									<p>Air temperature</p>
+									<p class="smalltext">Northern Hemisphere freezes over in days!</p>
+								</div>
+							</div>
+							<div class="fragment" style="float: right; width: 50%">
+								<img src="figures/day_after_sea_level.gif" height="350px">
+								<p>Sea level</p>
+								<p class="smalltext">Rises 25 m!</p>
+							</div>
+						</div>
+
+						<aside class="notes">
+							Concern over AMOC slowdown was happening before 2013.
+							Snapshot estimates based on 5 hydrographic sections showed a 30% slowdown between 1957 and 2004.
+							The Day After Tomorrow - 2004 - 44% rating on Rotten Tomatoes website.
+							Exaggerated as these effects are, they do have a grain of truth.
+						</aside>
+					</section>
+					
+					<section id="amoc_slowdown">What happens if the AMOC slows down?
+						<div class="fragment">
+							<div style="float: left; width: 45%">
+								<img src="figures/jackson_2015a.png" height="300px">
+								<p>Air temperature</p>
+								<p class="smalltext">Climate model shows NH air temperatures cool by up to 8°C</p>
+								<p class="citation">(Jackson et al., 2009)</p>
+							</div>
+							<div class="fragment" style="float: right; width: 45%">
+								<img src="figures/goddard.png" height="300px">
+								<p>Sea level</p>
+								<p class="smalltext">Rose by 128 mm during a 30% downturn in AMOC during 2009/2010</p>
+								<p class="citation"> (Goddard et al., 2015)</p>
+							</div>
+						</div>
+
+						<aside class="notes">
+							Climate model shows air temperature over UK & Ireland reducing by around 5°C.
+							30% downturn in AMOC in 2009/2010.
+							Observed sea level along NE coast of USA.
+							Coastal sea level north of New York City jumped by 128 mm.
+							A 1-in-850 year event. 
+						</aside>
+					</section>
+				
+				</section>
+
+				<section id="rapid">
+					
+					<section>
+						Concern about an AMOC slowdown led to a full-width observing array being deployed in 2004
+					</section>
+					
+					<section>RAPID Project
+						<div>
+							<img style="float: left;" src="figures/wb5_mooring_schematic.jpg" height="300px" />
+							<img style="float: right;" src="figures/Rapid_MOC_schematic_2011.png" height="300px" />
+						</div>
+						<p style="clear: both;" class="citation">(from www.rapid.ac.uk)</p>
+						<p class="fragment smalltext">Instruments on the moorings measure temperature, salinity, pressure and current velocity - twice a day</p>
+					</section>
+
+					<section>
+						How is AMOC transport measured?
+						<div class="fragment" style="float:left; width: 50%;">
+							<img style="background-color: white; height:300px;" src="figures/amoc_components.png">
+							<p>Components</p>
+							<ul class="smalltext">
+								<li>Florida Current</li>
+								<li>Ekman transport (wind-driven)</li>
+								<li>Geostrophic transport (density-driven)</li>
+								<li>Residual transport (zero net flow)</li>
+							</ul>
+						</div>
+						<div class="fragment" style="float: right; width: 45%;">
+							<img style="height:300px;" src="figures/baroclinic.gif">
+							<p>Geostrophic transport</p>
+							<ul class="smalltext">
+								<li>Difference between E/W density drives N/S flow</li>
+								<li>Density measured by moorings at boundaries</li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+							Florida Current - most of Gulf Stream at this latitude, measured by undersea cables.
+							Ekman - estimated from satellite wind data
+							Geostrophic transport - difference in density between east and west drives flow northward or 
+							southward.
+							Analagous to wind driven by differences between high and low pressure being along isobars.
+							Residual - based on assumption that on timescales longer than a week or so, what goes into basin above 26°N must come out - zero net transport.
+						</aside>
+					</section>
+					
+					<section>
+						<div>
+							What have RAPID results shown?
+						</div>
+						<div style="float: left; width: 60%">
+							<img src="figures/smeed_2018.jpg" >
+							<p class="citation">(Smeed et al., 2018)</p>
+						</div>
+						<div style="float: right; width: 38%; font-size: 34px; border: 2px solid red; margin-top: 15px;">
+							<span style="font-size: 32px; text-decoration: underline;"> Reduced AMOC</span>
+							<ul> 
+								<li style="font-size: 28px">2004 - 2008: 18.8 Sv </li>
+								<li style="font-size: 28px"> 2008 - 2012: 15.9 Sv </li>
+								<li style="font-size: 28px"> 2012 - 2107: 16.3 Sv </li>
+							</ul>
+						</div>
+						<div class="fragment" style="float:right; width: 38%; border: 2px solid magenta; margin-top: 20px;">
+							<p style="font-size: 32px; text-decoration: underline;"> Reduced LNADW</p>
+							<p style="font-size: 28px"> (3000 to 5000 m)</p>
+							<p style="font-size: 28px">2008 – 2017 is 30% less than 2004 - 2008</p>
+						</div>
+
+						<aside class="notes">
+							Is this a long-term decline due to climate change or a cycle over 10 or so years?
+							Short time series and high variability make it difficult to tell.
+						</aside>
+					</section>
+
+					<section>
+						<p>Detecting long-term change in the AMOC</p>
+						<img style="background-color: white;" src="figures/baehr_2008.png">
+						<p class="citation">(Baehr et al., 2008)</p>
+						<p class="fragment smalltext">Using the AMOC time series alone means a change takes 40-60 years to detect</p>
+						<aside class="notes">
+							This is a simulation of the RAPID array in a coupled-climate model (ECHAM5/MPI-OM).
+							The black line shows the control run, with pre-industrial greenhouse gas concentrations.
+							The red line is the run forced with an emission scenario (IPCC AR4)
+							The 3 horizontal dotted lines are 3 different detection criteria:
+								1) Strictest - outside lowest value observed in the past
+								2) Anything outside 2 SD
+								3) Anything outside lowest/highest 2.5% of observations.
+							Results (ignoring false positives before 2030):
+								1) 2060
+								2 and 3) ~2035 
+							Detection time of 40 to 60 years, depending on detection criterion used.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						How can we improve detection of AMOC changes?
+						<div class="fragment box" style="float: left;">Reduce variability</div>
+						<div class="fragment box" style="float: right;">Increase length of timeseries</div>
+					</section>
+					<section>
+						<p>Reduce variability by combining AMOC with a less noisy climate signal</p>
+						<p class="smalltext">e.g., cross-Atlantic density difference
+						<div style="float: left;" class="fragment">	
+							<img style="float: left; margin-right: 5px;" src="figures/baehr_2007_fig5b.png" height="280px">
+							<img style="float: left; margin-right: 10px;" src="figures/baehr_2007_fig5c.png" height="280px">
+							<p style="float: left;" class="citation">(Baehr et al., 2007)</p>
+						</div>
+
+						<div class="fragment" style="clear: both;">
+							<p class="smalltext">Using deep density differences reduces the detection time to around 30 years.</p>
+						</div>
+
+						<aside class="notes">
+							The climate signal must:
+							1) Not be noisy, i.e., have good signal-to-noise ration
+							2) Be dynamically linked to the AMOC - remember observed reduction in LNADW - that will lead to a change in density difference
+							3) Not be directly influenced by global warming, e.g. sea surface temperature
+
+							Most of deep density differences that have a result are 1700 - 3700m - mostly UNADW (1100
+							to 3000m) with a little LNADW (3000 to 5000 m)
+						</aside>
+					</section>
+
+					<section>
+						Can we reduce variability of AMOC?
+						<p class="fragment smalltext">Variability due to mesoscale (~100 km, 1 month) eddies is suppressed close to steep continental slopes, e.g., off the Bahamas</p>
+						<img class="fragment" style="background-color: white" src="figures/dh_wb_profile3.png" height="350px">
+					</section>
+
+					<section>
+						Mean AMOC transport and variability for different mooring configurations
+						<img class="fragment" style="background-color: white" src="figures/moc_mean_std.png" height="350px">
+						<p class="fragment smalltext">AMOC noise is suppressed slightly by using measurements closer to the boundary</p>
+					</section>
+
+					<section>
+						<p">Variability of density with distance from boundary</p>
+						<img style="background-color: white;" src="figures/all_rho_var.png" height="400px">
+						<p class="fragment smalltext">Pinpointing where variability is lowest may allow us to look with more confidence at 'snapshot' data, i.e., increase the length of the timeseries.</p>
+					</section>
+				
+				</section>
+
+				<section>
+					<p>Summary</p>
+					<ul class="smalltext">
+						<li style="margin-bottom: 30px;" class="fragment">The AMOC plays an important role in climate</li>
+						<li style="margin-bottom: 30px;" class="fragment">A slowdown will impact climate in UK/Ireland and further afield</li>
+						<li style="margin-bottom: 30px;" class="fragment">Detecting slowdown using the AMOC itself may need a timeseries of over 60 years</li>
+						<li style="margin-bottom: 30px;" class="fragment">Using deep density, which has much lower variability, may reduce detection time</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Thank you, and any questions?</p>
+					<div class="fragment" style="margin-top: 100px;">
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/email.png" height="100px;">
+							<p style="font-size: 24px">elw2u16@soton.ac.uk</p>
+						</div>
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/twitter.png" height="100px;">
+							<p style="font-size: 24px">@E_L_Worthington</p>
+						</div>
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/instagram.png" height="100px;">
+							<p style="font-size: 24px">@emma_at_sea</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/notes/notes.js', async: true },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+				
+				slideNumber: true,
+
+				defaultTiming: 90,
+			});
+
+			Reveal.configure({ 
+				keyboard: {
+			        37: 'prev',
+			        38: 'prev',
+			        39: 'next',
+			        40: 'next'
+			    }
+ 			});
+
+		</script>
+	</body>
+</html>
