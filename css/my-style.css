@@ -1,0 +1,34 @@
+/* Stylesheet for reveal.js presenation */
+
+.reveal .slide-number {
+    position: absolute;
+    display: block;
+    width: 10%;
+    left: 8px;
+    bottom: 8px;
+    z-index: 31;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #93a1a1; 
+    background-color: #002b36; 
+  }
+
+.reveal p.citation {
+	font-size: 24px;
+	font-style: italic;
+}
+
+.reveal .smalltext {
+  font-size: 28px;
+}
+
+/* Overwrite moon - put in another css file */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+
