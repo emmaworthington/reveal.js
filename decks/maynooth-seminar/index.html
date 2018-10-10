@@ -55,6 +55,12 @@
 							<img style="float: left; width: 10%; margin-left: 25px;" class="plain" src="logos/nasa_meatball_50.png">
 						</div>
 						<p style="float: left; width: 85%;" class="fragment smalltext">(thermo = temperature; haline = salinity)</p>
+
+						<aside class="notes">
+							Upper waters moving towards pole and sinking.
+							Deep waters flow down length of Atlantic to ACC.
+							Move into Indian and Pacific Oceans.
+							Whatever is in water when it sinks (carbon, oxygen) will likely stay there for 100s of years.
 					</section>
 					
 					<section>Atlantic Meridional Overturning Circulation
@@ -63,10 +69,9 @@
 							<img src="figures/amoc_schematic_detail.jpg" height="500px">
 						</div>
 						<aside class="notes">
+							Slowing of AMOC - more heat recirculates in gyre
 							Very large amounts of heat moved northward
 							Heat lost to atmosphere - moderates climate
-							Carbon, oxygen moved to deep ocean for 10/100's years - sink
-							Slowing of AMOC - more heat recirculates in gyre
 							-> affects intensity of hurricanes
 							-> affects rainfall in Sahel
 						</aside>
@@ -82,10 +87,10 @@
 							<img style="background-color: white; height:400px;" src="figures/amoc_components.png">
 							<p class="smalltext">Components</p>
 							<ul style="font-size: 24px">
-								<li>Florida Current</li>
-								<li>Ekman transport (wind-driven)</li>
-								<li>Geostrophic transport (density-driven)</li>
-								<li>Residual transport (zero net flow)</li>
+								<li>Gulf Stream (Florida Current)</li>
+								<li>Wind-driven (Ekman)</li>
+								<li>Density-driven (Geostrophic)</li>
+								<li>Residual (zero net flow)</li>
 							</ul>
 						</div>
 						<div class="fragment" style="float: right; width: 45%;">
@@ -111,12 +116,18 @@
 						<p>Before 2004, measurements were taken by research ships crossing the Atlantic</p>
 						<div style="float: left; width: 48%;">
 							<img src="figures/discovery2.png" height="400px" />
-							<p style="font-size: 24px;">RRS Discovery leaving Woods Hole Oceanographic Institute in 1957</p>
+							<p style="font-size: 24px;">RRS Discovery II leaving Woods Hole Oceanographic Institute in 1957</p>
 						</div>
 						<div style="float: right; width: 48%;" class="fragment">
 							<img src="figures/bryden2005.png" height="400px" />
 							<p class="citation">(Data from Bryden et al., (2005))</p>
 						</div>
+
+						<aside class="notes">
+							Only 5 hydrographic sections between 1957 and 2004.
+							Appears to show AMOC slowdown.
+							Will highlight problem with this later!
+						</aside>
 					</section>
 				</section>
 
@@ -189,6 +200,11 @@
 						</div>
 						<p style="clear: both;" class="citation">(from www.rapid.ac.uk)</p>
 						<p class="fragment smalltext">Instruments on the moorings measure temperature, salinity, pressure and current velocity - twice a day</p>
+
+						<aside class="notes">
+							Moorings are nearly full height.
+							Upper and lower NADW.
+							Moorings close to edges of basin to estimate geostrophic flow.
 					</section>
 
 					<section>
@@ -208,6 +224,13 @@
 							<img class="plain" src="figures/amoc.png" height="450px" />
 							<p class="citation">(Data from www.rapid.ac.uk)</p>
 						</div>
+
+						<aside class="notes">
+							Data from 2004 to 2017.
+							AMOC strength - equivalent to net northward flow in top 800 m.
+							Units of transport are Sv - measure of volume per second.
+							Variability shows problem with other plot.
+						</aside>
 					</section>
 					
 					<section>
@@ -243,6 +266,7 @@
 						<img class="plain" style="background-color: white;" src="figures/baehr_2008.png" height="350px">
 						<p class="citation">(Baehr et al., 2008)</p>
 						<p class="fragment smalltext">Using the AMOC time series alone means a change takes 40-60 years to detect</p>
+						
 						<aside class="notes">
 							This is a simulation of the RAPID array in a coupled-climate model (ECHAM5/MPI-OM).
 							The black line shows the control run, with pre-industrial greenhouse gas concentrations.
@@ -290,6 +314,12 @@
 						Can we reduce variability of AMOC?
 						<p class="fragment smalltext">Variability due to mesoscale (~100 km, 1 month) eddies is suppressed close to steep continental slopes, e.g., off the Bahamas</p>
 						<img class="fragment plain" style="background-color: white" src="figures/dh_wb_profile3.png" height="400px">
+
+						<aside class="notes">
+							Mesoscale (radius ~100km, may persist for months) eddies move westward and increase variability
+							at wb.
+							Eddies are suppressed as they reach the steep continental slope.
+						</aside>
 					</section>
 
 					<section>
@@ -310,12 +340,11 @@
 					<p>Summary</p>
 					<ul class="smalltext">
 						<li style="margin-bottom: 30px;" class="fragment">A slowdown will impact climate in Ireland, UK and further afield</li>
-						<li style="margin-bottom: 30px;" class="fragment">Detecting slowdown using the AMOC itself may need a timeseries of over 60 years</li>
-						<li style="margin-bottom: 30px;" class="fragment">Using climate signals with low variability may reduce detection time by 50%</li>
+						<li style="margin-bottom: 30px;" class="fragment">Detecting slowdown using the AMOC itself may need a timeseries over 60 years long</li>
+						<li style="margin-bottom: 30px;" class="fragment">Using climate signals with low variability may reduce detection time by half</li>
 						
 						<ul class="fragment smalltext">
-							<li style="margin-bottom: 30px;">e.g., deep density differences</li>
-							<li>Variability decreases close to steep continental slopes</li>
+							<li style="margin-bottom: 30px;">e.g., deep density measured close to steep continental slopes</li>
 						</ul>
 					</ul>
 				</section>
@@ -365,7 +394,7 @@
 				
 				slideNumber: true,
 
-				defaultTiming: 90,
+				defaultTiming: 75,
 			});
 
 			Reveal.configure({ 
