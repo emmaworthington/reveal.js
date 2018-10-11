@@ -31,4 +31,9 @@
 .reveal h5,
 .reveal h6 {
   text-transform: none;
+}
+
+.reveal .speaker-notes {
+  font-size: 16px;
+}
 
