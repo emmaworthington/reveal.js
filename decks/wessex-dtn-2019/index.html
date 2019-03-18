@@ -40,36 +40,69 @@
 						<p>Outline</p>
 						<ul>
 							<li>What is the Atlantic Meridional Overturning Circulation?</li>
-							<li>Why do we want to simplify it?</li>
-							<li>How the dynamics are simplified</li>
-							<li>What's next</li>
+							<li>Why do we want to simplify its dynamics?</li>
+							<li>How: linear regression models</li>
 						</ul>
-					</section>
-					
-					<section>What is the Atlantic Meridional Overturning Circulation?</section>
-					
-					<section>Atlantic Meridional Overturning Circulation (AMOC)
-						<div class="fragment">
-							<img class="plain" style="background-color: white;" src="figures/iu.jpeg" height="550px">
-							<p class="citation">(Srokosz and Bryden, Science, 2015)</p>
-						</div>
+
 						<aside class="notes">
 							<ul>
-								<li>Slowing of AMOC - more heat recirculates in gyre</li>
-								<li>Very large amounts of heat moved northward</li>
-								<li>Heat lost to atmosphere - moderates climate</li>
-								<ul>
-									<li>affects intensity of hurricanes</li>
-									<li>affects rainfall in Sahel</li>
-								</ul>
+								<li>What is the AMOC and why do we care about it?</li>
 							</ul>
 						</aside>
+					</section>
+					
+					<section>
+						What is the Atlantic Meridional Overturning Circulation?
+						<p class="fragment">(AMOC)</p>
+					</section>
+					
+					<section>RAPID mooring array at 26°N
+						<div>
+							<img class="plain" style="float: left; width: 15%;" src="figures/wb5_mooring_schematic.jpg" height="350px" />
+							<img class="plain" style="float: right; width: 83%;" src="figures/Rapid_MOC_schematic_2011.png" height="350px" />
+						</div>
+						<p style="clear: both;" class="citation">(from www.rapid.ac.uk)</p>
+						<p class="fragment smalltext">Instruments on the moorings measure temperature, salinity, pressure and current velocity</p>
+
+						<aside class="notes">
+							<ul>
+								<li>Upper layers of warm, salty water moving northwards to seas around Greenland</li>
+								<li>Water cools, becoming dense enough to sink</li>
+								<li>This and Antarctic Ocean are only regions of deep water formation</li>
+								<li>Cold, dense water returns equatorwards at depth</li>
+								<li>Very large amounts of heat moved northward</li>
+								<li>Heat lost to atmosphere - moderates climate</li>
+								<li>Slowing of AMOC - more heat recirculates in gyre</li>
+								<ul>
+									<li>affects intensity of hurricanes</li>
+									<li>affects rainfall in Sahel due to ITCZ position</li>
+								</ul>
+								<li>Moorings are nearly full height</li>
+								<li>Moorings close to edges of basin to estimate geostrophic flow</li>
+								<li>Measurements taken every 15 minutes but post-processing are 12-hourly</li>
+								<li>Schematic shows upper and lower NADW more clearly</li>
+							</ul>
+					</section>
+
+					<section>
+						<div style="float: left; width: 40%">
+							<p class="smalltext">Mid-ocean transport profile</p>
+							<img class="plain" src="figures/wb2_mid_ocean_profile.png" height="400px">
+						</div>
+						<div style="float: right; width: 60%">
+							<p class="smalltext">RAPID AMOC timeseries</p>
+							<img class="plain" src="figures/moc_2017.png" height="400px">
+						</div>
+						<div style="float: left; clear: both;"
+							<p class="smalltext">Transport = flux through a cross-sectional area (e.g., Atlantic Ocean at 26°N)</p>
+							<p class="smalltext">UMO = Upper Mid-Ocean transport, integrated down to deepest northward transport</p>
+						</div>
 					</section>
 
 				</section>
 					
 				<section>
-					<section>How is AMOC strength measured?</section>
+					<section>Why do we want to simplify the dynamics?</section>
 
 					<section>
 						<p>Before 2004, measurements were taken by research ships crossing the Atlantic</p>
@@ -87,232 +120,109 @@
 								<li>Only 5 hydrographic sections between 1957 and 2004.</li>
 								<li>Transport measured in Sverdrups, = volume per second</li>
 								<li>Appears to show AMOC slowdown.</li>
-								<li>Will highlight problem with this later!</li>
+								<li>How can we use other historical data to tell us about the state of the AMOC?
 							</ul>
 						</aside>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<p>A simple linear regression</p>
+					</section>
+
+					<section>
+						<div style="float: left; width: 60%;">
+							<img class="plain" src="figures/A05_THETA.jpg" height="600px" />
+						</div>
+						<div style="float: right; width: 40%;">
+							<p class="smalltext">Atlantic Ocean potential temperature section at 24°N</p>
+							<p class="citation">World Ocean Circulation Experiment (1990 - 1997)</p>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Potential temperature - temperature a water parcel would have if it were moved adiabatically to a reference pressure</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<p>Simple linear regression</p>
+						<div style="float: left; width: 50%;">
+							<img class="plain" src="figures/longworth2011_fig8.jpg" height="400px" />
+							<p class="citation">Longworth et al. (2011)</p>
+						</div>
+						<div style="float: right; width: 50%;">
+							<p style="margin-top: 50px;" class="smalltext">Data from 39 CTD casts taken between 1981 and 2005 </p>
+							<p style="margin-top: 50px;" class="smalltext">$$ \Delta T_{upper} = A\dot{}temp_{400} + B $$</p>
+							<p style="margin-top: 50px;" class="smalltext">Regression explains 53% of variance</p>
+						</div>
+
+						<aside class="notes">
+							Temperature chosen at western boundary at 400 dbar - mid-point of upper layer.
+							Variability greater at western boundary and more measurements.
+						</aside>
+					</section>
+
+					<section>
+						<p>Simple linear regression using RAPID data</p>
+						<p class="smalltext">Thermocline (0 - 800m) transport predicted by western boundary temperature at 400 dbar</p>
+						<img class="plain" src="figures/wb_temp_400.png">
+						<p class="smalltext fragment">Only 9% of thermocline transport variance explained by regression</p>
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<p>Climate simulations show that the AMOC is very likely to slow down by the end of this century</p>
-						<p class="citation">(Intergovernmental Panel on Climate Change (IPCC), 5th Annual Report, 2013)</p>
-						<p class="fragment">So what?</p>
 
-						<aside class="notes">
-							<p>Climate model - computer simulations of the physics of ocean and atmosphere and their interaction</p>
-							<p>Forced - difference GHG emission scenarios are added to see how the physics changes</p>
-						</aside>
+					<section>
+						<p>A slightly more complicated linear regression</p>
 					</section>
-					
-					<section id="amoc_slowdown">What happens if the AMOC slows down?
-						<div class="fragment">
-							<div style="float: left; width: 49%">
-								<img class="plain" src="figures/jackson_2015a.png" height="425px">
-								<p style="font-size: 24px">Climate model shows NH air temperatures cool by up to 8°C</p>
-								<p class="citation">(Jackson et al., 2009)</p>
-							</div>
-							<div class="fragment" style="float: right; width: 49%">
-								<img class="plain" src="figures/goddard.png" height="425px">
-								<p style="font-size: 24px;">Sea level rose by 128 mm during a 30% AMOC downturn</p>
-								<p class="citation"> (Goddard et al., 2015)</p>
-							</div>
+
+
+					<section>
+						<p>Multiple linear regression</p>
+						<div style="float: left; width: 50%;">
+							<img class="plain" src="figures/A05_THETA_trimmed.png" height="500px" />
 						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Climate model shows air temperature over UK & Ireland reducing by around 5°C</li>
-								<li>30% downturn in AMOC in 2009/2010.</li>
-								<li>Observed sea level along NE coast of USA.</li>
-								<li>Coastal sea level north of New York City increased by over 12 cm</li>
-								<li>A 1-in-850 year event</li>
-							</ul>
-						</aside>
-					</section>
-				
-				</section>
-
-				<section id="rapid">
-					
-					<section>
-						Concern about an AMOC slowdown led to a full-width observing array being deployed in 2004
-					</section>
-					
-					<section>RAPID Project
-						<div>
-							<img style="float: left; width: 15%;" src="figures/wb5_mooring_schematic.jpg" height=350px" />
-							<img style="float: right; width: 83%;" src="figures/Rapid_MOC_schematic_2011.png" height="350px" />
-						</div>
-						<p style="clear: both;" class="citation">(from www.rapid.ac.uk)</p>
-						<p class="fragment smalltext">Instruments on the moorings measure temperature, salinity, pressure and current velocity - twice a day</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Moorings are nearly full height</li>
-								<li>Upper and lower NADW</li>
-								<li>Moorings close to edges of basin to estimate geostrophic flow</li>
-							</ul>
+						<div style="float: right; width: 50%;">
+							<img class="plain" style="margin-top: 25px;" src="figures/three_layer_model.png" height="250px" />
+							<p style="margin-top: 30px;" class="smalltext">$$ \Delta T = A\dot{}temp_1 + B\dot{}sal_2 + C\dot{}temp_3 + D $$</p>
+								<p style="margin-top: 30px;" class="smalltext">Find the depth at which each variable gives the highest variance explained by the regression</p>
+						</div>			
 					</section>
 
 					<section>
-						<p>Data is collected by a research ship every 18 months</p>
-						<img style="float: left; width: 45%;" src="figures/discovery_aft_deck1.png" height="450px"/>
-						<img style="float: right; width: 45%;" src="figures/mooring_adcp_deploy2.png" height="450px" />
-						<p class="citation" style="clear: both;">(Photos: Ben Moat, NOC)</p>
+						<p>Multiple linear regression using temperature and salinity anomalies</p>
+						<p class="smalltext">$$ \Delta T = A\dot{}temp_{780} + B\dot{}sal_{1020} + C\dot{}temp_{2840} + D $$</p>
+						<img class="plain" src="figures/three_layer_ts.png">
+						<p class="smalltext fragment">Now 39% of mid-ocean transport variance explained by regression</p>
 					</section>
 
 					<section>
-						<p>What have RAPID results shown?</p>
-						<div style="float: left; width: 48%;" class="fragment">
-							<img class="plain" src="figures/bryden2005.png" height="450px" />
-							<p class="citation">(Data from Bryden et al., (2005))</p>
-						</div>
-						<div style="float: right; width: 48%;" class="fragment">
-							<img class="plain" src="figures/amoc.png" height="450px" />
-							<p class="citation">(Data from www.rapid.ac.uk)</p>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Data from 2004 to 2017</li>
-								<li>AMOC strength - equivalent to net northward flow in top 1000 m</li>
-								<li>Variability shows problem with other plot</li>
-							</ul>
-						</aside>
+						<p>Multiple linear regression using density anomalies</p>
+						<p class="smalltext">$$ \Delta T = A\dot{}\rho_{740} + B\dot{}\rho_{940} + C\dot{}\rho_{2840} + D $$</p>
+						<img class="plain" src="figures/three_layer_rho_anom.png">
+						<p class="smalltext fragment">67% of mid-ocean transport variance explained by regression</p>
 					</section>
-					
-					<section>
-						<div>
-							The AMOC is in a 'reduced state'
-						</div>
-						<div style="float: left; width: 65%">
-							<img class="plain" src="figures/smeed_2018.jpg" height="525px;">
-							<p class="citation">(Smeed et al., 2018)</p>
-						</div>
-						<div style="float: right; width: 33%; border: 2px solid red; margin-top: 140px;">
-							<span style="font-size: 28px; text-decoration: underline;"> Reduced AMOC</span>
-							<ul> 
-								<li style="font-size: 24px">2004 - 2008: 18.8 Sv </li>
-								<li style="font-size: 24px"> 2008 - 2012: 15.9 Sv </li>
-								<li style="font-size: 24px"> 2012 - 2017: 16.3 Sv </li>
-							</ul>
-						</div>
-						<div class="fragment" style="float:right; width: 33%; border: 2px solid magenta; margin-top: 30px;">
-							<p style="font-size: 28px; text-decoration: underline;"> Reduced LNADW</p>
-							<p style="font-size: 24px"> (3000 to 5000 m)</p>
-							<p style="font-size: 24px">2008 – 2017 is 30% less than 2004 - 2008</p>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Positive transport = northward, negative = southward</li>
-								<li>Is this a long-term decline due to climate change or a cycle over 10 or so years?</li>
-								<li>Short time series and high variability make it difficult to tell.</li>
-							</ul>
-						</aside>
-					</section>
-
-					<section>
-						<p>Detecting long-term change in the AMOC</p>
-						<img class="plain" style="background-color: white;" src="figures/baehr_2008.png" height="350px">
-						<p class="citation">(Baehr et al., 2008)</p>
-						<p class="fragment smalltext">Using the AMOC time series alone means a change takes 40-60 years to detect</p>
-						
-						<aside class="notes">
-							<ul>
-								<li>This is a simulation of the RAPID array in a coupled-climate model (ECHAM5/MPI-OM)</li>
-								<li>The black line shows the control run, with pre-industrial greenhouse gas concentrations</li>
-								<li>The red line is the run forced with GHG emission scenario (IPCC AR4)</li>
-								<li>The 3 horizontal dotted lines are 3 different detection criteria</li>
-								<ol>
-									<li>Strictest - outside lowest value observed in the past</li>
-									<li>Anything outside 2 SD</li>
-									<li>Anything outside lowest/highest 2.5% of observations</li>
-								</ol>
-								<li>Results (ignoring false positives before 2030), times from 2005</li>
-								<ol>
-									<li>2060</li>
-									<li>~2035 (2 and 3)</li>
-								</ol>
-								<li>Detection time of 40 to 60 years, depending on detection criterion used and observation error</li>
-							</ul>
-						</aside>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						How can we improve detection of AMOC changes?
-						<div class="fragment box" style="float: left;">Reduce variability</div>
-						<div class="fragment box" style="float: right;">Increase length of timeseries</div>
-					</section>
-					<section>
-						<p>Reduce variability by combining AMOC with a less noisy climate signal</p>
-						<div style="float: left; width: 70%;">
-							<img class="plain" src="figures/baehr_2007_fig5c.png" height="450px">
-						</div>
-						<div style="float: right; width: 28%;">
-							<p class="smalltext">Using deep cross-basin density difference reduces the detection time to 30 years.</p>
-							<p class="citation">(Baehr et al., 2007)</p>
-						</div>
-
-						<aside class="notes">
-							The climate signal must:
-							<ol>
-								<li>Not be noisy, i.e., have good signal-to-noise ration</li>
-								<li>Be dynamically linked to the AMOC - remember observed reduction in LNADW - that will lead to a change in density difference</li>
-								<li>Not be directly influenced by global warming, e.g. sea surface temperature</li>
-							</ol>
-							<p>
-							Deep density differences that improve detection time are 1700 - 3700m - mostly UNADW (1100
-							to 3000m) with a little LNADW (3000 to 5000 m)</p>
-						</aside>
-					</section>
-
-					<section>
-						Can we reduce variability of AMOC?
-						<p class="fragment smalltext">Variability due to mesoscale (~100 km, 1 month) eddies is suppressed close to steep continental slopes, e.g., off the Bahamas</p>
-						<img class="fragment plain" style="background-color: white" src="figures/dh_wb_profile3.png" height="400px">
-
-						<aside class="notes">
-							<ul>
-								<li>Mesoscale (radius ~100km, may persist for months) eddies move westward and increase variability
-							at wb.</li>
-								<li>Eddies are suppressed as they reach the steep continental slope.</li>
-							</ul>
-						</aside>
-					</section>
-
-					<section>
-						Mean AMOC transport and variability for different mooring configurations
-						<img class="plain" style="background-color: white" src="figures/moc_mean_std.png" height="400px">
-						<p class="fragment smalltext">AMOC noise is suppressed slightly by using measurements closer to the boundary</p>
-					</section>
-
-					<section>
-						<p">Variability of density with distance from boundary</p>
-						<img style="background-color: white;" src="figures/all_rho_var.png" height="450px">
-						<p class="fragment smalltext">Identifying where variability is lowest may allow us to say more about historical 'snapshot' data, i.e., increase the length of the timeseries.</p>
-
-						<aside class="notes">
-							<p>If we can use density differences as a proxy for AMOC strength, low variability may mean we extend that 'snapshot'
-							spatially and in time</p>
-						</aside>
-					</section>
-				
 				</section>
 
 				<section>
 					<p>Summary</p>
 					<ul class="smalltext">
-						<li style="margin-bottom: 30px;" class="fragment">A slowdown will impact climate in Ireland, UK and further afield</li>
-						<li style="margin-bottom: 30px;" class="fragment">Detecting slowdown using the AMOC itself may need a timeseries 60+ years long</li>
-						<li style="margin-bottom: 30px;" class="fragment">Using climate signals with low variability may reduce detection time by half</li>
-						
-						<ul class="fragment smalltext">
-							<li style="margin-bottom: 30px;">e.g., deep density measured close to steep continental slopes</li>
-						</ul>
+						<li style="margin-bottom: 30px;" class="fragment">A three-layer regression captures nearly 70% of the variance of an AMOC component</li>
+						<li style="margin-bottom: 30px;" class="fragment">Using temperature and salinity doesn't capture dynamics as well as density</li>
+						<li style="margin-bottom: 30px;" class="fragment">Applying the regression to historical temperature and salinity data should extend our understanding of past AMOC states (within a level of uncertainty)</li>
 					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Allows us to use historical T/S data to give us a better picture of AMOC state</li>
+							<li>Unfortunate since historical salinity data (e.g. 1950s) is unreliable</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -321,7 +231,7 @@
 					<div class="fragment" style="margin-top: 100px;">
 						<div style="float: left; width: 32%;">
 							<img class="plain" style="background-color: #002b36;" src="logos/email.png" height="100px;">
-							<p style="font-size: 20px">Emma.Worthington@soton.ac.uk</p>
+							<p style="font-size: 20px">emma.worthington@soton.ac.uk</p>
 						</div>
 						<div style="float: left; width: 32%;">
 							<img class="plain" style="background-color: #002b36;" src="logos/twitter.png" height="100px;">
@@ -332,11 +242,6 @@
 							<p style="font-size: 24px">@emma_at_sea</p>
 						</div>
 					</div>
-				</section>
-
-				<section>
-					<p>If you were wondering how a 5 km long mooring is deployed from a ship...</p>
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/jAZB2EyTTOk?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</section>
 
 			</div>
@@ -355,12 +260,13 @@
 					{ src: '../../plugin/markdown/marked.js' },
 					{ src: '../../plugin/markdown/markdown.js' },
 					{ src: '../../plugin/notes/notes.js', async: true },
-					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../plugin/math/math.js', async: true}
 				],
 				
 				slideNumber: true,
 
-				defaultTiming: 75,
+				defaultTiming: 45,
 			});
 
 			Reveal.configure({ 
