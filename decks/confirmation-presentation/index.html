@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/moon.css">
+		<link rel="stylesheet" href="css/my-style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+
+			<div class="slides">
+ 
+				<section id='title_slide' data-background-image="logos/combined_logo_white.png" data-background-size="95%" data-background-position="50% 5%">
+					<h3>Simplifying the Dynamics of the Atlantic Meridional Overturning Circulation at 26°N</h3>
+					<p>Emma Worthington</p>
+					<p class="smalltext">Gerard McCarthy, Robert Marsh, Jenny Mecking, Sybren Drijfhout</p>
+				</section>
+
+
+				<section id='background'>
+
+					<section>
+						<p>Outline</p>
+						<ul>
+							<li>What is the Atlantic Meridional Overturning Circulation?</li>
+							<li>Why do we want to simplify its dynamics?</li>
+							<li>How: linear regression models</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>What is the AMOC and why do we care about it?</li>
+							</ul>
+						</aside>
+					</section>
+					
+					<section>
+						What is the Atlantic Meridional Overturning Circulation?
+						<p class="fragment">(AMOC)</p>
+					</section>
+					
+					<section>RAPID mooring array at 26°N
+						<div>
+							<img class="plain" style="float: left; width: 15%;" src="figures/wb5_mooring_schematic.jpg" height="350px" />
+							<img class="plain" style="float: right; width: 83%;" src="figures/Rapid_MOC_schematic_2011.png" height="350px" />
+						</div>
+						<p style="clear: both;" class="citation">(from www.rapid.ac.uk)</p>
+						<p class="fragment smalltext">Instruments on the moorings measure temperature, salinity, pressure and current velocity</p>
+
+						<aside class="notes">
+							<ul>
+								<li>Upper layers of warm, salty water moving northwards to seas around Greenland</li>
+								<li>Water cools, becoming dense enough to sink</li>
+								<li>This and Antarctic Ocean are only regions of deep water formation</li>
+								<li>Cold, dense water returns equatorwards at depth</li>
+								<li>Very large amounts of heat moved northward</li>
+								<li>Heat lost to atmosphere - moderates climate</li>
+								<li>Slowing of AMOC - more heat recirculates in gyre</li>
+								<ul>
+									<li>affects intensity of hurricanes</li>
+									<li>affects rainfall in Sahel due to ITCZ position</li>
+								</ul>
+								<li>Moorings are nearly full height</li>
+								<li>Moorings close to edges of basin to estimate geostrophic flow</li>
+								<li>Measurements taken every 15 minutes but post-processing are 12-hourly</li>
+								<li>Schematic shows upper and lower NADW more clearly</li>
+							</ul>
+					</section>
+
+					<section>
+						<div style="float: left; width: 40%">
+							<p class="smalltext">Mid-ocean transport profile</p>
+							<img class="plain" src="figures/wb2_mid_ocean_profile.png" height="400px">
+						</div>
+						<div style="float: right; width: 60%">
+							<p class="smalltext">RAPID AMOC timeseries</p>
+							<img class="plain" src="figures/moc_2017.png" height="400px">
+						</div>
+						<div style="float: left; clear: both;"
+							<p class="smalltext">Transport = flux through a cross-sectional area (e.g., Atlantic Ocean at 26°N)</p>
+							<p class="smalltext">UMO = Upper Mid-Ocean transport, integrated down to deepest northward transport</p>
+						</div>
+					</section>
+
+				</section>
+					
+				<section>
+					<section>Why do we want to simplify the dynamics?</section>
+
+					<section>
+						<p>Before 2004, measurements were taken by research ships crossing the Atlantic</p>
+						<div style="float: left; width: 45%;">
+							<img class="plain" src="figures/discovery2.png" height="400px" />
+							<p style="font-size: 24px;">RRS Discovery II leaving Woods Hole Oceanographic Institute in 1957</p>
+						</div>
+						<div style="float: right; width: 55%;" class="fragment">
+							<img class="plain" src="figures/bryden2005.png" height="400px" />
+							<p class="citation">(Data from Bryden et al., (2005))</p>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Only 5 hydrographic sections between 1957 and 2004.</li>
+								<li>Transport measured in Sverdrups, = volume per second</li>
+								<li>Appears to show AMOC slowdown.</li>
+								<li>How can we use other historical data to tell us about the state of the AMOC?
+							</ul>
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<p>A simple linear regression</p>
+					</section>
+
+					<section>
+						<div style="float: left; width: 60%;">
+							<img class="plain" src="figures/A05_THETA.jpg" height="600px" />
+						</div>
+						<div style="float: right; width: 40%;">
+							<p class="smalltext">Atlantic Ocean potential temperature section at 24°N</p>
+							<p class="citation">World Ocean Circulation Experiment (1990 - 1997)</p>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Potential temperature - temperature a water parcel would have if it were moved adiabatically to a reference pressure</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<p>Simple linear regression</p>
+						<div style="float: left; width: 50%;">
+							<img class="plain" src="figures/longworth2011_fig8.jpg" height="400px" />
+							<p class="citation">Longworth et al. (2011)</p>
+						</div>
+						<div style="float: right; width: 50%;">
+							<p style="margin-top: 50px;" class="smalltext">Data from 39 CTD casts taken between 1981 and 2005 </p>
+							<p style="margin-top: 50px;" class="smalltext">$$ \Delta T_{upper} = A\dot{}temp_{400} + B $$</p>
+							<p style="margin-top: 50px;" class="smalltext">Regression explains 53% of variance</p>
+						</div>
+
+						<aside class="notes">
+							Temperature chosen at western boundary at 400 dbar - mid-point of upper layer.
+							Variability greater at western boundary and more measurements.
+						</aside>
+					</section>
+
+					<section>
+						<p>Simple linear regression using RAPID data</p>
+						<p class="smalltext">Thermocline (0 - 800m) transport predicted by western boundary temperature at 400 dbar</p>
+						<img class="plain" src="figures/wb_temp_400.png">
+						<p class="smalltext fragment">Only 9% of thermocline transport variance explained by regression</p>
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<p>A slightly more complicated linear regression</p>
+					</section>
+
+
+					<section>
+						<p>Multiple linear regression</p>
+						<div style="float: left; width: 50%;">
+							<img class="plain" src="figures/A05_THETA_trimmed.png" height="500px" />
+						</div>
+						<div style="float: right; width: 50%;">
+							<img class="plain" style="margin-top: 25px;" src="figures/three_layer_model.png" height="250px" />
+							<p style="margin-top: 30px;" class="smalltext">$$ \Delta T = A\dot{}temp_1 + B\dot{}sal_2 + C\dot{}temp_3 + D $$</p>
+								<p style="margin-top: 30px;" class="smalltext">Find the depth at which each variable gives the highest variance explained by the regression</p>
+						</div>			
+					</section>
+
+					<section>
+						<p>Multiple linear regression using temperature and salinity anomalies</p>
+						<p class="smalltext">$$ \Delta T = A\dot{}temp_{780} + B\dot{}sal_{1020} + C\dot{}temp_{2840} + D $$</p>
+						<img class="plain" src="figures/three_layer_ts.png">
+						<p class="smalltext fragment">Now 39% of mid-ocean transport variance explained by regression</p>
+					</section>
+
+					<section>
+						<p>Multiple linear regression using density anomalies</p>
+						<p class="smalltext">$$ \Delta T = A\dot{}\rho_{740} + B\dot{}\rho_{940} + C\dot{}\rho_{2840} + D $$</p>
+						<img class="plain" src="figures/three_layer_rho_anom.png">
+						<p class="smalltext fragment">67% of mid-ocean transport variance explained by regression</p>
+					</section>
+				</section>
+
+				<section>
+					<p>Summary</p>
+					<ul class="smalltext">
+						<li style="margin-bottom: 30px;" class="fragment">A three-layer regression captures nearly 70% of the variance of an AMOC component</li>
+						<li style="margin-bottom: 30px;" class="fragment">Using temperature and salinity doesn't capture dynamics as well as density</li>
+						<li style="margin-bottom: 30px;" class="fragment">Applying the regression to historical temperature and salinity data should extend our understanding of past AMOC states (within a level of uncertainty)</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Allows us to use historical T/S data to give us a better picture of AMOC state</li>
+							<li>Unfortunate since historical salinity data (e.g. 1950s) is unreliable</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<p>Thank you!</p>
+					<p>Any questions?</p>
+					<div class="fragment" style="margin-top: 100px;">
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/email.png" height="100px;">
+							<p style="font-size: 20px">emma.worthington@soton.ac.uk</p>
+						</div>
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/twitter.png" height="100px;">
+							<p style="font-size: 24px">@E_L_Worthington</p>
+						</div>
+						<div style="float: left; width: 32%;">
+							<img class="plain" style="background-color: #002b36;" src="logos/instagram.png" height="100px;">
+							<p style="font-size: 24px">@emma_at_sea</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/notes/notes.js', async: true },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../plugin/math/math.js', async: true}
+				],
+				
+				slideNumber: true,
+
+				defaultTiming: 45,
+			});
+
+			Reveal.configure({ 
+				keyboard: {
+			        37: 'prev',
+			        38: 'prev',
+			        39: 'next',
+			        40: 'next'
+			    }
+ 			});
+
+		</script>
+	</body>
+</html>
