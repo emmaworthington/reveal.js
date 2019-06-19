@@ -28,34 +28,45 @@
 			<div class="slides">
  
 				<section id='title_slide' data-background-image="logos/combined_logo_white.png" data-background-size="95%" data-background-position="50% 5%">
-					<h3>Simplifying the Dynamics of the Atlantic Meridional Overturning Circulation at 26°N</h3>
+					<div>
+						<img style='position: relative; top: -10px; left: -577px; height: 60px;' src='logos/nerc-logo.eps' />
+					</div>
+					<h3 style='font-size: 48px; margin-top: 30px; margin-bottom: 80px;'>Simplifying the Dynamics of the Atlantic Meridional Overturning Circulation at 26°N</h3>
 					<p>Emma Worthington</p>
-					<p class="smalltext">Gerard McCarthy, Robert Marsh, Jenny Mecking, Sybren Drijfhout</p>
+					<p class="smalltext">Gerard McCarthy, Robert Marsh, Jenny Mecking, Sybren Drijfhout</p>	
+					<p style="color: #eee8d5; margin-top: 80px;" class='smalltext'>PhD confirmation presentation, 27 June 2019</p>					
 				</section>
 
 
 				<section id='background'>
 
 					<section>
-						<p>Outline</p>
+						<h3>Overview</h3>
 						<ul>
-							<li>What is the Atlantic Meridional Overturning Circulation?</li>
-							<li>Why do we want to simplify its dynamics?</li>
-							<li>How: linear regression models</li>
+							<li>Atlantic Meridional Overturning Circulation </li>
+							<ul>
+								<li>What is it and why is it important?</li>
+								<li>Why do we want to simplify its dynamics?</li>
+							</ul>
+							<li>Layered models</li>
+							<li>Linear regression models</li>
+							<li>Conclusions</li>
 						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>What is the AMOC and why do we care about it?</li>
+								<li></li>
 							</ul>
 						</aside>
 					</section>
+				</section>
 					
+				<section>
 					<section>
-						What is the Atlantic Meridional Overturning Circulation?
-						<p class="fragment">(AMOC)</p>
+						Atlantic Meridional Overturning Circulation
+						<p class="fragment" style='color: #cb4b16;'>AMOC</p>
 					</section>
-					
+						
 					<section>RAPID mooring array at 26°N
 						<div>
 							<img class="plain" style="float: left; width: 15%;" src="figures/wb5_mooring_schematic.jpg" height="350px" />
@@ -99,33 +110,33 @@
 						</div>
 					</section>
 
-				</section>
+			</section>
 					
+			<section>
+				<section>Why do we want to simplify the dynamics?</section>
+
 				<section>
-					<section>Why do we want to simplify the dynamics?</section>
+					<p>Before 2004, measurements were taken by research ships crossing the Atlantic</p>
+					<div style="float: left; width: 45%;">
+						<img class="plain" src="figures/discovery2.png" height="400px" />
+						<p style="font-size: 24px;">RRS Discovery II leaving Woods Hole Oceanographic Institute in 1957</p>
+					</div>
+					<div style="float: right; width: 55%;" class="fragment">
+						<img class="plain" src="figures/bryden2005.png" height="400px" />
+						<p class="citation">(Data from Bryden et al., (2005))</p>
+					</div>
 
-					<section>
-						<p>Before 2004, measurements were taken by research ships crossing the Atlantic</p>
-						<div style="float: left; width: 45%;">
-							<img class="plain" src="figures/discovery2.png" height="400px" />
-							<p style="font-size: 24px;">RRS Discovery II leaving Woods Hole Oceanographic Institute in 1957</p>
-						</div>
-						<div style="float: right; width: 55%;" class="fragment">
-							<img class="plain" src="figures/bryden2005.png" height="400px" />
-							<p class="citation">(Data from Bryden et al., (2005))</p>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Only 5 hydrographic sections between 1957 and 2004.</li>
-								<li>Transport measured in Sverdrups, = volume per second</li>
-								<li>Appears to show AMOC slowdown.</li>
-								<li>How can we use other historical data to tell us about the state of the AMOC?
-							</ul>
-						</aside>
-					</section>
-
+					<aside class="notes">
+						<ul>
+							<li>Only 5 hydrographic sections between 1957 and 2004.</li>
+							<li>Transport measured in Sverdrups, = volume per second</li>
+							<li>Appears to show AMOC slowdown.</li>
+							<li>How can we use other historical data to tell us about the state of the AMOC?
+						</ul>
+					</aside>
 				</section>
+
+			</section>
 
 
 				<section>

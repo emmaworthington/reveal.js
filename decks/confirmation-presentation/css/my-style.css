@@ -23,6 +23,11 @@
   font-size: 28px;
 }
 
+.reveal {
+  font-size: 36px;
+  font-weight: 100;
+}
+
 /* Overwrite moon - put in another css file */
 .reveal h1,
 .reveal h2,
@@ -31,9 +36,17 @@
 .reveal h5,
 .reveal h6 {
   text-transform: none;
+  font-family: "Lato", sans-serif;
 }
 
 .reveal .speaker-notes {
   font-size: 16px;
+}
+
+/* Remove grey box around images */
+.reveal section img { 
+  background: none; 
+  border: none; 
+  box-shadow: none; 
 }
 
