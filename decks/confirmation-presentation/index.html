@@ -7,8 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/simple.css">
-		<link rel="stylesheet" href="css/my-style.css">
+		<link rel="stylesheet" href="../../css/theme/my-white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="../../lib/css/zenburn.css">
@@ -27,15 +26,16 @@
 
 			<div class="slides">
  
-				<section id='title_slide' data-background-image="logos/combined_logo_white.png" data-background-size="95%" data-background-position="50% 5%">
+				<section id='title_slide' data-background-image="logos/combined_logo_header_blue.pdf" data-background-size="90%">
 					<div>
-						<img style='position: relative; top: -60px; left:-10px; height: 60px;' src='logos/nerc-logo.eps' />
-					</div>
-					<div>
-						<h3 style='font-size: 48px; margin-top: 30px; margin-bottom: 80px;'>Simplifying the Dynamics of the Atlantic Meridional Overturning Circulation at 26°N</h3>
-						<p>Emma Worthington</p>
-						<p class="smalltext">Gerard McCarthy, Robert Marsh, Jenny Mecking, Sybren Drijfhout</p>	
-						<p style="color: #eee8d5; margin-top: 80px;" class='smalltext'>PhD confirmation presentation, 27 June 2019</p>	
+						<div style="margin-top: 100px;">
+							<h4 >Simplifying the Dynamics of the Atlantic Meridional Overturning Circulation at 26°N</h4>
+							<p>Emma Worthington</p>
+						</div>
+						<div style="margin-top: 100px;">
+							<p class="contrast">Gerard McCarthy, Robert Marsh, Jenny Mecking, Sybren Drijfhout</p>	
+							<p class='contrast'>PhD confirmation presentation, 27 June 2019</p>	
+						</div>
 					</div>				
 				</section>
 
@@ -67,6 +67,7 @@
 					</section>
 
 					<section>
+						<h4>AMOC observed by RAPID array at 26°N</h4>
 						<div>
 							<img class="plain" src="figures/Rapid_MOC_schematic_2011.png" height="350px"/>
 							<p class="citation">[www.rapid.ac.uk]</p>
@@ -96,16 +97,16 @@
 						<h4>Observations of the AMOC</h4>
 
 						<div style="float: left; width: 40%;" class="fragment">
-							<p class="smalltext">Hydrographic sections</p>
-							<p class="smalltext">1957 to 2004</p>
-							<img class="plain" src="figures/bryden2005.png" height="350px" />
+							<p>Hydrographic sections</p>
+							<p>1957 to 2004</p>
+							<img style="border: 1px solid red;" class="plain" src="figures/bryden2005.png" height="350px" />
 							<p class="citation">[Data from Bryden et al., (2005)]</p>
 						</div>
 
 						<div style="float: right; width: 60%">
-							<p class="smalltext">RAPID timeseries</p>
-							<p class="smalltext">2004 to present</p>
-							<img class="plain" src="figures/moc_2017.png" height="350px">
+							<p>RAPID timeseries</p>
+							<p>2004 to present</p>
+							<img style="border: 1px solid red;" class="plain" src="figures/moc_2017.png" height="350px">
 							<p class="citation">[www.rapid.ac.uk]</p>
 						</div>
 
@@ -121,23 +122,38 @@
 					</section>
 
 					<section>
+						<h4>Can we learn more about the AMOC before 2004?</h4>
 						<ul>
-							<li class="smalltext">Other hydrographic data is available prior to 2004, e.g. repeat CTDs</li>
-							<li class="smalltext">Not sufficient to estimate AMOC as RAPID does</li>
-							<li class="smalltext">Longworth et al., (2011) used a proxy of temperature at the western boundary at a depth of 400 dbar for thermocline transport</li>
+							<li>Other hydrographic data is available prior to 2004</li>
+							<ul>
+								<li class="fragment">e.g. repeat CTDs, short mooring arrays</li>
+								<li class="fragment">not sufficient to estimate AMOC as RAPID does</li>
+							</ul>
+							<li class="fragment">Proxy for thermocline transport &mdash; temperature at a depth of 400 dbar at the western boundary (WB) <span class="citation">[Longworth et al. (2011)]</span></li>
 						</ul>
-						<div class="fragment" style="display: inline-block;">
-							<img src="figures/longworth2011_fig8.jpg" height="350px;" />
-						</div>
-						<div class="fragment" style="display: inline-block;">
-							<img src="figures/longworth_regression.pdf" height="350px" />
+						<div style="margin-top: 50px;">
+							<div class="fragment" style="display: inline-block; width: 20%; vertical-align: top;">
+								<p class="smalltext contrast">39 values between 1986 and 1998</p>
+								<p class="smalltext contrast">Repeat WB CTD stations</p>
+							</div>
+							<div class="fragment" style="display: inline-block; width: 26%; vertical-align: top;">
+								<img src="figures/longworth2011_fig8.jpg" height="250px;" />
+							</div>
+							<div class="fragment" style="display: inline-block; width: 26%; vertical-align: top;">
+								<img src="figures/longworth_regression.pdf" height="250px" />
+							</div>
+							<div class="fragment" style="display: inline-block; width: 20%; vertical-align: top;">
+								<p class="smalltext contrast">155 monthly mean values between 2004 and 2017</p>
+								<p class="smalltext contrast">RAPID WB profile</p>
+							</div>
 						</div>
 					</section>
 
 					<section>
-						<p class="fragment">Longworth et al. regression model explained 53% of the observed thermocline transport variance</p>
-						<img src="figures/wb_ct_400_ols.pdf" height="300px;" />
-						<p class="fragment">This regression model explains only 10%</p>
+						<p>Longworth regression model explained 53% of the observed thermocline transport variance</p>
+						<div class="fragment">
+							<img src="figures/wb_ct_400_ols.pdf" height="300px;" />
+							<p>RAPID data regression model explains only 10%</p>
 						<p class="fragment">How can it be improved?</p>
 					</section>
 
@@ -330,6 +346,7 @@
 
 				<section>
 					<h3>References</h3>
+					<p>Longworth, H. R., Bryden, H. L. and Baringer, M. O. (2011) ‘Historical variability in Atlantic meridional baroclinic transport at 26.5°N from boundary dynamic height observations’, Deep-Sea Research Part II. Elsevier Ltd, 58(Climate and the Atlantic Meridional Overturning Circulation), pp. 1754–1767. doi: 10.1016/j.dsr2.2010.10.057.</p>
 				</section>
 
 			</div>
