@@ -99,14 +99,14 @@
 						<div style="float: left; width: 40%;" class="fragment">
 							<p>Hydrographic sections</p>
 							<p>1957 to 2004</p>
-							<img style="border: 1px solid red;" class="plain" src="figures/bryden2005.png" height="350px" />
+							<img src="figures/bryden2005.png" height="350px" />
 							<p class="citation">[Data from Bryden et al., (2005)]</p>
 						</div>
 
 						<div style="float: right; width: 60%">
 							<p>RAPID timeseries</p>
 							<p>2004 to present</p>
-							<img style="border: 1px solid red;" class="plain" src="figures/moc_2017.png" height="350px">
+							<img src="figures/moc_2017.pdf" height="350px">
 							<p class="citation">[www.rapid.ac.uk]</p>
 						</div>
 
@@ -131,29 +131,31 @@
 							</ul>
 							<li class="fragment">Proxy for thermocline transport &mdash; temperature at a depth of 400 dbar at the western boundary (WB) <span class="citation">[Longworth et al. (2011)]</span></li>
 						</ul>
-						<div style="margin-top: 50px;">
-							<div class="fragment" style="display: inline-block; width: 20%; vertical-align: top;">
-								<p class="smalltext contrast">39 values between 1986 and 1998</p>
-								<p class="smalltext contrast">Repeat WB CTD stations</p>
+							<div style="float: left; width: 48%; margin-top: 50px;" class="fragment">
+								<div style="display: inline-block; width: 40%; vertical-align: top;">
+									<p class="smalltext contrast">39 values between 1986 and 1998</p>
+									<p class="smalltext contrast">Repeat WB CTD stations</p>
+								</div>
+								<div style="display: inline-block; width: 52%; vertical-align: top;">
+									<img src="figures/longworth2011_fig8.jpg" height="250px;" />
+								</div>
 							</div>
-							<div class="fragment" style="display: inline-block; width: 26%; vertical-align: top;">
-								<img src="figures/longworth2011_fig8.jpg" height="250px;" />
+							<div style="float: left; width: 48%; margin-top: 50px;" class="fragment">
+								<div style="display: inline-block; width: 53%; vertical-align: top;">
+									<img src="figures/longworth_regression.pdf" height="250px" />
+								</div>
+								<div style="display: inline-block; width: 40%; vertical-align: top;">
+									<p class="smalltext contrast">155 monthly mean values between 2004 and 2017</p>
+									<p class="smalltext contrast">RAPID WB profile</p>
+								</div>
 							</div>
-							<div class="fragment" style="display: inline-block; width: 26%; vertical-align: top;">
-								<img src="figures/longworth_regression.pdf" height="250px" />
-							</div>
-							<div class="fragment" style="display: inline-block; width: 20%; vertical-align: top;">
-								<p class="smalltext contrast">155 monthly mean values between 2004 and 2017</p>
-								<p class="smalltext contrast">RAPID WB profile</p>
-							</div>
-						</div>
 					</section>
 
 					<section>
 						<p>Longworth regression model explained 53% of the observed thermocline transport variance</p>
 						<div class="fragment">
-							<img src="figures/wb_ct_400_ols.pdf" height="300px;" />
 							<p>RAPID data regression model explains only 10%</p>
+							<img src="figures/wb_ct_400_ols.pdf" height="300px;" />
 						<p class="fragment">How can it be improved?</p>
 					</section>
 
@@ -171,16 +173,22 @@
 				</section>
 
 				<section>
-					<div style="float: left; width: 50%;">
+<!-- 					<div style="float: left; width: 40%;">
 						<h6>Density</h6>
-						<img class="plain" src="figures/A05_SIGMA_trimmed.pdf" height="400px" />
+						<img src="figures/A05_SIGMA_trimmed.pdf" height="400px" />
 						<p class="fragment smalltext">Isopycnals slope up to the east above 1000 m, down to the east below</p>
 					</div>
-					<div class="fragment" style="float: right; width: 50%;">
-						<h6>Mid-ocean transport</h6>
-						<img class="plain" src="figures/mo_profile.pdf" height="400px" />
-						<p class="fragment smalltext">Southwards above ~800 m and below ~1100 m, with an intermediate northwards layer</p>
+					<div style="float: left; width: 20%;">
+						<img src="figures/thermal_wind.pdf" />
+						<p>
 					</div>
+					<div class="fragment" style="float: left; width: 40%;">
+						<h6>Mid-ocean transport</h6>
+						<img style="margin-top: 20px;" src="figures/mo_profile.pdf" height="400px" />
+						<p class="fragment smalltext">Southwards above ~800 m and below ~1100 m, with an intermediate northwards layer</p>
+					</div> -->
+
+					<img style="display: block; max-width: 1000px; max-height: 800px; width: auto; height: auto;" src="figures/geostrophy.pdf"/>
 
 					<aside class="notes">
 						<ul>
@@ -192,7 +200,7 @@
 				<section>
 					<h4>Variability in the mid-ocean (geostrophic) AMOC component</h4>
 					<p>Defined by partition between two southwards transports:</p>
-					<div style="margin-top: 70px;">
+					<div style="float: left; margin-top: 70px;">
 						<div style="float: left; width: 40%;">
 							<h4>Recirculation in the upper layer</h4>
 						</div>
@@ -203,28 +211,27 @@
 							<h4>Deep overturning return flow (NADW)</h4>
 						</div>
 					</div>
-					<div style="margin-top: 70px;">
-						<p class="fragment">To capture this variability, at least 3 layers need to be represented by the regression model</p>
+					<div style="float: left; margin-top: 100px;">
+						<p class="contrast fragment">To capture this variability, at least 3 layers need to be represented by the regression model</p>
 					</div>
 				</section>
 
 				<section>
 					<h4>Changes in layer thickness</h4>
-					<div style="float: left; width: 50%; background: white;">
-						<img src="figures/positive_umo.png" height="300px;">
+					<div style="float: left; width: 100%; background: white;">
+						<img style="display: block; max-width: 450px; max-height: 450px; width: auto; height: auto; float: left;" src="figures/positive_umo.png" />
+						<div style="float: right; width: 40%;">
+							<p>Weaker southwards recirculation in upper layer</p>
+							<p>Stronger deep return flow</p>
+						</div>
 					</div>
-					<div style="float: right; width: 50%; background: white;">
-						<img src="figures/negative_umo.png" height="300px;">
+					<div class="fragment" style="float: left; width: 100%; background: white;">
+						<img style="display: block; max-width: 450px; max-height: 450px; width: auto; height: auto; float: left;" src="figures/negative_umo.png">
+						<div style="float: right; width: 40%;">
+							<p>Stronger southwards recirculation in upper layer</p>
+							<p>Weaker deep return flow</p>
+						</div
 					</div>
-				</section>
-
-				<section>
-					<h4>Layer 
-					<ul>
-						<li><span class="citation">Frajka-Williams et al., (2016)</span> found strong correlation between isopycnal displacements and UMO transport on both western (positive) and eastern (negative) boundaries above 1400 m</li>
-						<li>They also found strong correlation between deep western boundary density anomalies and LNADW transport</li>
-						<li>Other studies show UMO seasonality is driven by eastern boundary density anomalies <span class="citation">Chidichimo et al., (2010), P&eacute;r&eacute;z-Hern&aacute;ndez et al., (2015)</span></li>
-					</ul>
 				</section>
 			</section>
 
@@ -234,58 +241,88 @@
 				</section>
 
 				<section>
+					<h4>Selecting explanatory variables</h4>
+					<div style="float: left; width: 25%; padding-top: 50px;">
+						<p class="smalltext">Strong correlation between isopycnal displacements and <span style="color: #fc2bfc">UMO transport</span> on both western (solid) and eastern boundaries (dashed) above 1400 m</p>
+					</div>
+					<div style="float: left; width: 50%;">
+						<img src="figures/FrajkaWilliams2016_fig8.pdf" height="450px;" />
+						<p class="citation">Fig. 8, Frajka-Williams et al., (2016)</p>
+					</div>
+					<div style="float: left; width: 25%; padding-top: 50px;">
+						<p class="smalltext">Strong correlation between deep western boundary density anomalies and <span style="color: #5515a7;">LNADW transport</span> </p>
+					</div>
+				</section>
+
+				<section>
+					<h4>Selecting explanatory variables</h4>
+					<div style="float: left; width: 50%;">
+						<img src="figures/PerezHernandez2015_fig11.jpg" height="450px;" />
+						<p class="citation">Fig. 11, P&eacute;r&eacute;z-Hern&aacute;ndez et al., (2015)</p>
+					</div>
+					<div style="float: left; width: 50%; padding-top: 50px;">
+						<p>UMO seasonality is driven by eastern boundary density anomalies centered around 1000 m</p>
+						<p class="citation">Chidichimo et al., (2010), P&eacute;r&eacute;z-Hern&aacute;ndez et al., (2015)</p>
+					</div>
+				</section>
+
+				<section>
 					<div>
-						<img class="plain" style="margin-top: 25px;" src="figures/three_layer_model.png" height="250px" />
-						<p style="margin-top: 30px;" class="smalltext">$$ \Delta T = A\dot{}temp_1 + B\dot{}sal_2 + C\dot{}temp_3 + D $$</p>
-							<p style="margin-top: 30px;" class="smalltext">Find the depth at which each variable gives the highest variance explained by the regression</p>
+						<img class="plain" style="margin-top: 25px;" src="figures/three_layer_model.png" height="350px" />
+						<p style="margin-top: 30px;" class="smalltext">Find the depth at which each variable gives the highest variance explained by the ordinary least-squares (OLS) multiple linear regression</p>
+						<p style="margin-top: 30px;" class="smalltext">$$ UMO = \alpha \dot{}\rho + \beta\dot{}\rho + \gamma\dot{}\rho $$</p>
 					</div>			
 				</section>
 
 				<section>
-					<div style="float: left; width: 100%;">
-						<div style="float: left; width: 80%;">
-							<img src="figures/density_anomaly_2_ols.pdf" height="180px;">
+					<h4>Model results</h4>
+					<div style="float: left; width: 100%; height: 32%;">
+						<div style="float: left; width: 60%; ">
+							<img src="figures/density_anomaly_2_ols.pdf" height="150px;">
 						</div>
-						<div style="float: right; width: 20%;">
-							<p class="smalltext">Variance explained:</p>
-							<p class="smalltext">58%</p>
-						</div>
-					</div>
-					<div style="float: left; width: 100%;">
-						<div style="float: left; width: 80%;">
-							<img src="figures/density_anomaly_3_ols.pdf" height="180px;">
-						</div>
-						<div style="float: right; width: 20%;">
-							<p class="smalltext">63%</p>
+						<div style="float: left; width: 38%; padding-top: 30px;">
+							<p class="smalltext">$$ UMO = \alpha\dot{}\rho^{740}_{wb} + \beta\dot{}\rho^{1020}_{eb} $$</p>
+							<p class="smalltext">58% variance explained</p>
 						</div>
 					</div>
-					<div style="float: left; width: 100%;">
-						<div style="float: left; width: 80%;">
-							<img src="figures/density_anomaly_4_ols.pdf" height="180px;">
+					<div style="float: left; width: 100%; height: 32%;">
+						<div style="float: left; width: 60%;">
+							<img src="figures/density_anomaly_3_ols.pdf" height="150px;">
 						</div>
-						<div style="float: right; width: 20%;">
-							<p class="smalltext">70%</p>
+						<div style="float: left; width: 38%; padding-top: 30px;">
+							<p class="smalltext">$$ UMO = \alpha\dot{}\rho^{740}_{wb} + \beta\dot{}\rho^{1020}_{eb} + \gamma\dot{}\rho^{2840}_{wb} $$</p>
+							<p class="smalltext">63% variance explained</p>
+						</div>
+					</div>
+					<div style="float: left; width: 100%; height: 32%;">
+						<div style="float: left; width: 60%;">
+							<img src="figures/density_anomaly_4_ols.pdf" height="150px;">
+						</div>
+						<div style="float: left; width: 38%; padding-top: 30px;">
+							<p class="smalltext">$$ UMO = \alpha\dot{}\rho^{680}_{wb} + \beta\dot{}\rho^{900}_{eb} + \gamma\dot{}\rho^{1200}_{wb} + \zeta\dot{}\rho^{4100}_{wb}$$</p>
+							<p class="smalltext">70% variance explained</p>
 						</div>
 					</div>
 				</section>
 
 				<section>
 					<h4>Assumptions of linear regression models</h4>
+
+					<p class="smalltext" style="margin-top: 50px;">Four-variable OLS regression model failed 3 assumptions as it is based on a time series</p>
 					<ul>
-						<li>Linearity</li>
-						<li>No multi-colinearity</li>
+						<li>Autocorrelation of residuals</li>
 						<li>Homoscedasticity (equal variance of residuals)</li>
-						<li>No autocorrelation of residuals</li>
 						<li>Normal distribution of residuals</li>
 					</ul>
 
-					<div style="float: left; width:50%;">
-					<p class="smalltext" style="margin-top: 50px;">Four-variable OLS regression model failed 3 assumptions as it is based on a time series</p>
-					</div>
-
-					<div style="float: right; width:50%;">
+					<div style="float: left; width: 50%;">
 						<img src="figures/pacf.pdf" height="300px;" />
 					</div>
+					<div style="float: right; width: 50%;">
+
+					</div>
+
+					<p class="smalltext">An alternative is the generalized least-squares with autocorrelated errors (GLSAR) with lag 1</p>
 
 					<aside class="notes">
 						<ul>
@@ -295,10 +332,6 @@
 							<li>Is a residual dependent on the previous value?</li>
 						</ul>
 					</aside>
-				</section>
-
-				<section>
-					GLSAR(1) model
 				</section>
 
 				<section>
@@ -346,7 +379,10 @@
 
 				<section>
 					<h3>References</h3>
+					<p>Chidichimo, M. P., Kanzow, T., Cunningham, S. A., Johns, W. E., & Marotzke, J. (2010). The contribution of eastern-boundary density variations to the Atlantic meridional overturning circulation at 26.5°N. Ocean Science, 6(2), 475–490. https://doi.org/10.5194/os-6-475-2010</p>
+					<p>Frajka-Williams, E., Meinen, C. S., Johns, W. E., Smeed, D. A., Duchez, A., Lawrence, A. J., … Rayner, D. (2016). Compensation between meridional flow components of the Atlantic MOC at 26oN. Ocean Science, 12(2), 481–493. https://doi.org/10.5194/os-12-481-2016</p>
 					<p>Longworth, H. R., Bryden, H. L. and Baringer, M. O. (2011) ‘Historical variability in Atlantic meridional baroclinic transport at 26.5°N from boundary dynamic height observations’, Deep-Sea Research Part II. Elsevier Ltd, 58(Climate and the Atlantic Meridional Overturning Circulation), pp. 1754–1767. doi: 10.1016/j.dsr2.2010.10.057.</p>
+					<p>Pérez-Hernández, M. D., McCarthy, G. D., Vélez-Belchí, P., Smeed, D. A., Fraile-Nuez, E., & Hernández-Guerra, A. (2015). The Canary Basin contribution to the seasonal cycle of the Atlantic Meridional Overturning Circulation at 26°N. Journal of Geophysical Research: Oceans, 120(11), 7237–7252. https://doi.org/10.1002/2015JC010969</p>
 				</section>
 
 			</div>

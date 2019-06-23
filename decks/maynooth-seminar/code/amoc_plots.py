@@ -15,7 +15,7 @@ year = np.array((1957, 1981, 1992, 1998, 2004))
 amoc = np.array((22.9, 18.7, 19.4, 16.1, 14.8))
 
 fig1 = plt.figure(figsize=(10, 10))
-plt.scatter(year, amoc, s=300)
+plt.scatter(year, amoc, s=500, marker='+', linewidth=5, color='#a90308')
 plt.tick_params(labelsize=20)
 plt.ylim((-4, 32))
 plt.xlabel('Year of hydrographic section', fontsize=24)
