@@ -105,6 +105,11 @@ body {
     font-style: italic;
 }
 
+.reveal section.references p {
+  font-size: 20px; 
+  text-align: left;
+}
+
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
 .reveal video,
@@ -146,6 +151,10 @@ body {
 .reveal ol ul {
   display: block;
   margin-left: 40px; }
+
+.reveal ul li {
+  margin: 10px 0;
+}
 
 .reveal dt {
   font-weight: bold; }
@@ -196,10 +205,13 @@ body {
 .reveal table {
   margin: auto;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0; 
+  font-size: 18px;
+}
 
 .reveal table th {
-  font-weight: bold; }
+  font-weight: bold; 
+}
 
 .reveal table th,
 .reveal table td {
@@ -318,3 +330,21 @@ body {
 @media print {
   .backgrounds {
     background-color: #fff; } }
+
+/*********************************************
+ * FIGURES
+ *********************************************/
+.reveal figure {
+    display: inline-block;
+    margin: 20px; /* adjust as needed */
+}
+
+.reveal figure img {
+    vertical-align: top;
+}
+
+.reveal figure figcaption {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
