@@ -256,7 +256,7 @@ body {
 .reveal .slide-number {
     position: absolute;
     display: block;
-    width: 10%;
+    width: 5%;
     left: 8px;
     bottom: 8px;
     z-index: 31;
